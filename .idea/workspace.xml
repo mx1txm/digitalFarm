@@ -1,17 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74ebc7b0-23dd-404a-be97-c431c6cb791d" name="Default Changelist" comment="" />
+    <list default="true" id="74ebc7b0-23dd-404a-be97-c431c6cb791d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/static/digitalFarm/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/static/digitalFarm/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/filter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/post_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/post_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/post_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/list_all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/urls.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gsKGM0XMpBvq3dycK2lVzFzAPq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/digitalFarm/media" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/digitalFarm/media" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,11 +113,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598897762070</updated>
-      <workItem from="1598897764246" duration="450000" />
+      <workItem from="1598897764246" duration="2713000" />
+      <workItem from="1598902577675" duration="6627000" />
+      <workItem from="1598947369203" duration="3364000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

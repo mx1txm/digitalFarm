@@ -1,0 +1,113 @@
+{% extends "digitalFarm/base.html" %}
+
+{% block content %}
+<!-- Page Content -->
+<div>
+
+    <!-- Listing for filtered posts -->
+    <div class="container">
+    <div class="row">
+        <div>
+            {% for post in posts %}
+            <article class="media content-section">
+                <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2" href="#">{{ post.author }}</a>
+                        <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+                    </div>
+                    <h2><a class="article-title" href="{% url 'digitalFarm-detail' post.id %}">{{ post.title }}</a></h2>
+                    <p class="article-content">{{ post.content }}</p>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+<!-- until here -->
+    <div class="container col-lg-12">
+
+        <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Categories</h1>
+
+        <hr class="mt-2 mb-5">
+
+        <div class="row text-center text-lg-center">
+
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="/fruits" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/JI5VdAD2mAo/400x300" alt="">
+                    <label>Fruits</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="/vegetable" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/QvkAQTNj4zk/400x300" alt="">
+                    <label>Vegetables</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/tZlPXgFVQ6A/400x300" alt="">
+                    <label>Nuts</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/t4X660oKiYs/400x300" alt="">
+                    <label>Legumes</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/ZhA9vZQPTeE/400x300" alt="">
+                    <label>Honey</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/cdcEW3izjOQ/400x300" alt="">
+                    <label>Allium (Onion&Garlic)</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/fqkrXYMosT4/400x300" alt="">
+                    <label>Berries</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/d5xQVtmTUeo/400x300" alt="">
+                    <label>Fresh Herbs & salad</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/VVe3zOZM88E/400x300" alt="">
+                    <label>Spices</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/59Kh3TAajg0/400x300" alt="">
+                    <label>Tea</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/uOBApnN_K7w/400x300" alt="">
+                    <label>Oil</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/ygUgmmV8vB8/400x300" alt="">
+                    <label>Grains</label>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /.container -->
+{% endblock content %}
