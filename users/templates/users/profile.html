@@ -16,10 +16,21 @@
                   <legend class="boder-bottom mb-4">Profile info</legend>
                   {{ u_form|crispy }}
                   {{ p_form|crispy }}
+                  {{ d_form|crispy }}
               </fieldset>
               <div class="form-group">
                   <button class="btn btn-outline-info" type="submit">Update Profile</button>
-                  <button class="btn btn-outline-warning" type="submit">Delete Profile</button>
+              </div>
+          </form>
+
+          <form>
+              {% csrf_token %}
+              <fieldset class="form-group">
+                  <legend class="border-bottom mb-4">Delete User Account</legend>
+              </fieldset>
+              <div class="form-group">
+                  <button class="btn btn-danger">
+                      <a style="color: white" href="{% url 'profile_confirm_delete' %}">Delete Account</a></button>
               </div>
           </form>
       </div>

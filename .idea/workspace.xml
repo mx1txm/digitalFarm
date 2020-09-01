@@ -2,41 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74ebc7b0-23dd-404a-be97-c431c6cb791d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/static/digitalFarm/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/static/digitalFarm/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/filter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/post_confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/post_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/post_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/list_all.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/static/digitalFarm/about.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/allium.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/berries.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/fruits.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/grains.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/greens.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/honey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/legumes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/nuts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/oil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/spices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/tea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/vegetable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/delete_account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/profile_confirm_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/list_all.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/list_all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,13 +56,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/digitalFarm/media" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/users/templates/users" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/media" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/users/templates/users" />
+      <recent name="$PROJECT_DIR$/digitalFarm/templates/digitalFarm" />
       <recent name="$PROJECT_DIR$/digitalFarm/media" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -115,7 +118,8 @@
       <updated>1598897762070</updated>
       <workItem from="1598897764246" duration="2713000" />
       <workItem from="1598902577675" duration="6627000" />
-      <workItem from="1598947369203" duration="3364000" />
+      <workItem from="1598947369203" duration="12962000" />
+      <workItem from="1598981015805" duration="8240000" />
     </task>
     <servers />
   </component>

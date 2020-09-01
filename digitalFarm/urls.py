@@ -1,6 +1,7 @@
 from django.urls import path, include
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, FilterView
 from . import views
+from users.views import deleteuser
 
 from django.conf import settings
 from django.conf.urls.static import static

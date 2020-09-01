@@ -10,6 +10,7 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
+#Update
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 
@@ -21,3 +22,14 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image']
+
+#Delete
+class ProfileDeleteForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['image']
+
+class UserDeleteForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = []   #Form has only submit button.  Empty "fields" list still necessary, though.
