@@ -16,7 +16,6 @@
                   <legend class="boder-bottom mb-4">Profile info</legend>
                   {{ u_form|crispy }}
                   {{ p_form|crispy }}
-                  {{ d_form|crispy }}
               </fieldset>
               <div class="form-group">
                   <button class="btn btn-outline-info" type="submit">Update Profile</button>
@@ -30,7 +29,8 @@
               </fieldset>
               <div class="form-group">
                   <button class="btn btn-danger">
-                      <a style="color: white" href="{% url 'profile_confirm_delete' %}">Delete Account</a></button>
+                      <a style="color: white" href="{% url 'profile_confirm_delete' %}">Delete Account</a>
+                  </button>
               </div>
           </form>
       </div>

@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74ebc7b0-23dd-404a-be97-c431c6cb791d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/digitalFarm/static/digitalFarm/about.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/allium.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/berries.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/fruits.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/grains.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/greens.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/honey.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/legumes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/nuts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/oil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/spices.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/tea.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/vegetable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/delete_account.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/profile_confirm_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/list_all.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/list_all.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
@@ -119,7 +101,9 @@
       <workItem from="1598897764246" duration="2713000" />
       <workItem from="1598902577675" duration="6627000" />
       <workItem from="1598947369203" duration="12962000" />
-      <workItem from="1598981015805" duration="8240000" />
+      <workItem from="1598981015805" duration="8448000" />
+      <workItem from="1599040075164" duration="12593000" />
+      <workItem from="1599131196780" duration="2761000" />
     </task>
     <servers />
   </component>
