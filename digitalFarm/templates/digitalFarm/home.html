@@ -61,14 +61,31 @@
             </form>
         </div>
     </section>
+<hr class="mt-2 mb-5">
 </div>
 
 <h3>A B2B DIGITAL MARKETPLACE WHERE FAIR FOOD TRADE IS MADE EASY, FAST AND TRANSPARENT!</h3>
 <hr class="mt-2 mb-5">
-
+    <div class="container">
+    <h4>myFarm Marketplace is a digital B2B market solution that brings together Farmers and Industrial Buyers.</h4>
+    <a>We drive agricultural transactions through our digital platform in combination with our service partnership network. myFarm Marketplace accommodates online payments between buyer and seller, product quality check options, and end-to-end logistic services.
+myFarm Marketplace does not buy or sell crops and is not a broker. Instead, we offer you the ability to effortlessly market your crop via our platform.</a>
+    </div>
 <div class="container">
+<hr class="mt-2 mb-5">
+    <h4>HOW IT WORKS</h4>
+        <ul>1. Sign-up to the platform</ul>
+        <ul>2. Create your offer</ul>
+        <ul>3. Set a quantity & price</ul>
+        <ul>4. Provide us with crop characteristics & details</ul>
+        <ul>5. Post your seller offer or buyer bid</ul>
+        <ul>6. Stay updated by email or notification centre</ul>
+</div>
+<div class="container">
+<hr class="mt-2 mb-5">
     <div class="row">
         <div>
+        <a>Our latest offers:</a>
             {% for post in posts %}
             <article class="media content-section">
                 <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
@@ -106,5 +123,5 @@
     </li>
   </ul>
 </nav>
-
+<hr>
 {% endblock content %}

@@ -47,9 +47,17 @@ class Post(models.Model):
     price_min = models.CharField(max_length=10, blank=True, default='SOME STRING')
     price_max = models.CharField(max_length=10, blank=True, default='SOME STRING')
 
+class Snippet(models.Model):
+    title = models.CharField(max_length=100)
+    body = models.TextField()
+    created = models.DateTimeField()
+
+    class Meta:
+        ordering = ('created',)
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse('digitalFarm-detail', kwargs={'pk': self.pk})
+

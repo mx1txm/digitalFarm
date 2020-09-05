@@ -4,11 +4,13 @@
 <!-- Page Content -->
 <div>
     <h3>Filter Product</h3>
-    <form>
+    <form method="GET">
+        {% csrf_token %}
+        {{ myFilter.form }}
         <div class="form-row">
             <div class="form-group col-md-12">
                 <div class="input-group">
-                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Title contains...">
+                    <input class="form-control py-2 border-right-0 border" type="search" name="title_contains" placeholder="Title contains...">
                     <span class="input-group-append">
                         <div class="input-group-text bg-transparent">
                             <i class="fa fa-search"></i>
@@ -100,14 +102,29 @@
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
 
-    <form method="post">
+    <div>
+        <h2>{{ text }}</h2>
+        {% for post in myFilter.qs %}
+            <h1>{{ post.title }}</h1>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <ul>
+        {% for post in queryset %}
+            <h1>{{ post.title }}</h1>
+        {% endfor %}
+        </ul>
+    </div>
+
+<!-- BUTTON - GET REQUEST  -->
+    <form method="get">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ myFilter.form }}
         <input type="text">
         <button type="submit" name="button">Submit</button>
     </form>
     <h2>{{ text }}</h2>
-    {% for post in posts %}
+    {% for post in myFilter.qs %}
         <h1>{{ post.post }}</h1>
     {% endfor %}
 </div>

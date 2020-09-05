@@ -1,9 +1,12 @@
 from django import forms
 from .models import Post
+import django_filters
 
 class FilterForm(forms.ModelForm):
-    post = forms.CharField()
+    #post = forms.CharField()
+    author = django_filters.CharFilter(lookup_expr='iexact')
+    title = django_filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
         model = Post
-        fields = ('post',)
+        fields = ('title', 'author')

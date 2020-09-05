@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'digitalFarm.apps.DigitalfarmConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'django_filters',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

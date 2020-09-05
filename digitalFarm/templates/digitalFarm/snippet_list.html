@@ -1,0 +1,36 @@
+{% extends "digitalFarm/base.html" %}
+
+{% block title %}Snippet List{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <form method="GET">
+    {{ filter.form }}
+    <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <ul>
+    {% for post in posts %}
+        <li>
+        <a href="{% url 'digitalFarm-detail' post.id %}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <ul>
+    {% for posts in filter.qs %}
+        <div class="content-section">
+            <div class="media">
+                <img class="rounded-circle account-img" src="{{ posts.title }}">
+                <div class="media-body">
+                    <h2 class="account-heading">{{ posts.date_posted }}</h2>
+                    <p class="text-secondary">{{ posts.author }}</p>
+                    <p class="text-secondary">{{ user.city_choices }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

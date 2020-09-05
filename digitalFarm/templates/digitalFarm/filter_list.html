@@ -4,11 +4,11 @@
 <!-- Page Content -->
 <div>
     <h3>Filter Product</h3>
-    <form>
+    <form method="GET">
         <div class="form-row">
             <div class="form-group col-md-12">
                 <div class="input-group">
-                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Title contains...">
+                    <input class="form-control py-2 border-right-0 border" type="search" name="title_contains" placeholder="Title contains...">
                     <span class="input-group-append">
                         <div class="input-group-text bg-transparent">
                             <i class="fa fa-search"></i>
@@ -99,90 +99,21 @@
         </div>
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
-
-    <div class="container col-lg-12">
-
-        <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Categories</h1>
-
-        <hr class="mt-2 mb-5">
-
-        <div class="row text-center text-lg-center">
-
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/CNZ-9s5p2i8/400x300" alt="">
-                    <label>Onion</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/U4YdDVliDlA/400x300" alt="">
-                    <label>Red Onion</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/e2HMVL4t3ys/400x300" alt="">
-                    <label>Banana</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/_xN7UbcZ33I/400x300" alt="">
-                    <label>Cherry</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/hlqPQEL_KmE/400x300" alt="">
-                    <label>Fig</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/F_ilCik66Hg/400x300" alt="">
-                    <label>Grape</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/TFqjlTmkeyY/400x300" alt="">
-                    <label>Watermelon</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/kgkhD_kPSzQ/400x300" alt="">
-                    <label>Oranges</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/rje6ZcExHrM/400x300" alt="">
-                    <label>Peach</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/lElegSg89Ds/400x300" alt="">
-                    <label>Watermelon</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/VgCDU8K5l_E/400x300" alt="">
-                    <label>Pear</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/IeEFsajuORc/400x300" alt="">
-                    <label>Strawberry</label>
-                </a>
-            </div>
-        </div>
+    <!-- LISTS ALL FILTERED POSTS -->
+    <div>
+    {% for posts in queryset %}
+      <div class="content-section">
+             <div class="media">
+                    <img class="rounded-circle account-img" src="{{ posts.title }}">
+                    <div class="media-body">
+                           <h2 class="account-heading">{{ posts.date_posted }}</h2>
+                           <p class="text-secondary">{{ posts.author }}</p>
+                           <p class="text-secondary">{{ user.city_choices }}</p>
+                    </div>
+             </div>
+      </div>
+    {% endfor %}
     </div>
 </div>
-
 <!-- /.container -->
 {% endblock content %}

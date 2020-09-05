@@ -42,9 +42,9 @@ def profile(request):
             messages.success(request, f'Your account has been updated!')
             return redirect('profile')
 
-    #elif request.method == 'DELETE':
-    #    print('delete works')
-    #    return redirect('digitalFarm-home')
+    elif request.method == 'DELETE':
+        print('delete works')
+        return redirect('digitalFarm-home')
 
     else :
         u_form = UserUpdateForm(instance=request.user)
