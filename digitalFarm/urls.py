@@ -8,8 +8,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('search/', views.filter_list, name='search'),
-    path('filter/', FilterView.as_view(), name='digitalFarm-filter'),
+    #path('search/', views.filter_list, name='search'),
+    path('filter/', views.filter_list, name='digitalFarm-filter'),
+    #path('filter/', FilterView.as_view(), name='digitalFarm-filter'),
     path('snippet/', SnippedListView.as_view(), name='snippet'),
     path('', views.home, name='digitalFarm-home'),
     path('', PostListView.as_view(), name='digitalFarm-home'),
@@ -25,6 +26,7 @@ urlpatterns = [
     path('allium/', views.allium, name='digitalFarm-allium'),
     path('berries/', views.berries, name='digitalFarm-berries'),
     path('grains/', views.grains, name='digitalFarm-grains'),
+    path('greens/', views.greens, name='digitalFarm-greens'),
     path('honey/', views.honey, name='digitalFarm-honey'),
     path('legumes/', views.legumes, name='digitalFarm-legumes'),
     path('nuts/', views.nuts, name='digitalFarm-nuts'),

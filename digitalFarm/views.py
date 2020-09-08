@@ -30,21 +30,61 @@ class ArticleListView(ListView):
         print(product_filtered_list)
         return product_filtered_list.qs
 
-def filter_list(request):
-    print("inside filter_list")
-    #products = Post.objects.all()
-    qs = Post.objects.all()
-    #filter = ProductFilter(request.GET, queryset= products)
-    #title_contains = request.GET.get('title_contains')
-    title_contains_query = request.GET.get('title_contains')
+def is_valid_queryparam(param):
+    return param != '' and param is not None
 
+def filter_list(request):#BootstrapFilterView(request)
+    qs = Post.objects.all()
+    categories = Post.category
+    products = Post.product
+    city = Post.city_choices
+    price = Post.price
+
+    print(Post.category)
+    #filter = ProductFilter(request.GET, queryset= products)
+    title_contains_query = request.GET.get('title_contains')
+    categories_query = request.GET.get('category')
+    product_query = request.GET.get('product')
+    city_query = request.GET.get('city')
+    price_query = request.GET.get('product')
+    amount_query = request.GET.get('amount')
+
+    #date_min_query = request.GET.get('date_min')
+    #date_max_query = request.GET.get('date_max')
+
+    #Title
     if title_contains_query != '' and title_contains_query is not None:
         qs = qs.filter(title__icontains=title_contains_query)
+    #category
+    if is_valid_queryparam(categories_query) and categories_query != 'Choose...':
+        qs = qs.filter(category__iexact=categories_query)
+    #product
+    if is_valid_queryparam(product_query) and product_query != 'Choose...':
+        qs = qs.filter(product__iexact=product_query)
+    #city
+    if is_valid_queryparam(city_query):
+        qs = qs.filter(city__iexact=city_query)
+    #price
+    if is_valid_queryparam(price_query) and price_query != 'Price':
+        qs = qs.filter(price__iexact=price_query)
+    #Menge
+    if is_valid_queryparam(amount_query) and amount_query != 'Menge':
+        qs = qs.filter(amount__iexact=amount_query)
+    #date_min
+    #if is_valid_queryparam(date_min_query):
+        #qs = qs.filter(date_posted__gte=date_min_query) #date_posted
+    #date_max
+    #if is_valid_queryparam(date_max_query):
+        #qs = qs.filter(date_posted__lte=date_min_query)
 
     context = {
-        'queryset': qs
+        'queryset': qs,
+        'category' : categories,
+        'product' : products,
+        'city' : city,
+        'price' : price,
     }
-    #print(title_contains)
+
     #return render(request, 'digitalFarm/filter_list.html', {'filter': filter})
     return render(request, 'digitalFarm/filter_list.html', context)
 
@@ -68,7 +108,7 @@ def vegetable(request):
     return render(request, 'digitalFarm/category/vegetable.html')
 
 def allium(request):
-    return render(request, 'digitalFarm/category/allium.html')
+    return render(request, 'digitalFarm/category/wurzelgemuese.html')
 
 def berries(request):
     return render(request, 'digitalFarm/category/berries.html')
@@ -110,7 +150,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'content', 'city', 'category', 'product', 'product_type', 'amount_av_min', 'amount_av_max', 'price_min', 'price_max']
+    fields = ['title', 'content', 'city', 'category', 'product', 'product_type', 'amount', 'price']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -118,7 +158,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['title', 'content', 'city', 'category','product', 'product_type', 'amount_av_min', 'amount_av_max', 'price_min', 'price_max']
+    fields = ['title', 'content', 'city', 'category','product', 'product_type', 'amount', 'price']
 
     def form_valid(self, form):
         form.instance.author = self.request.user

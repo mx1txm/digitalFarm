@@ -7,6 +7,12 @@ from crispy_forms.bootstrap import InlineCheckboxes
 from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit
 
 # Create your models here.
+class Category(models.Model):
+    name= models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField(default='SOME STRING')
@@ -38,14 +44,15 @@ class Post(models.Model):
         ('Fairtrade'),
     )
 
-    category = models.CharField(max_length=15, choices=category_choices, default=category_choices[0][0])
+    category = models.ManyToManyField(Category, choices=category_choices)
     city = models.CharField(max_length=15, choices=city_choices, default=city_choices[0][0])
     product = models.CharField(max_length=15, choices=fruit_choices, default=fruit_choices[0][0])
     product_type = models.CharField(max_length=10, blank=True, default='SOME STRING')
-    amount_av_min = models.CharField(max_length=10, blank=True, default='SOME STRING')
-    amount_av_max = models.CharField(max_length=10, blank=True, default='SOME STRING')
-    price_min = models.CharField(max_length=10, blank=True, default='SOME STRING')
-    price_max = models.CharField(max_length=10, blank=True, default='SOME STRING')
+    amount = models.CharField(max_length=10, blank=True, default='SOME STRING')
+    price = models.CharField(max_length=10, blank=True, default='SOME STRING')
+
+    def __str__(self):
+        return self.title
 
 class Snippet(models.Model):
     title = models.CharField(max_length=100)

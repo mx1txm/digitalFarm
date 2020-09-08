@@ -19,48 +19,40 @@
             <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="form-group col-md-2">
-                <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" class="form-control" id="inputCity" name="city">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputState">Category</label>
-                <select id="inputState" class="form-control">
+                <select onmousedown="if(this.options.length>8){this.size=8;}"  onchange='this.size=0;' id="inputState" name='category' class="form-control">
                     <option selected>Choose...</option>
-                    <option value="0">Fruits</option>
-                    <option value="1">Vegetables</option>
-                    <option value="2">Nuts</option>
-                    <option value="3">legumes</option>
+                    <option value="fruits">fruits</option>
+                    <option value="legumes">legumes</option>
+                    <option value="veggies">veggies</option>
+                    <option value="nuts">nuts</option>
+                    <option value="honey">honey</option>
+                    <option value="oil">oil</option>
+                    <option value="tea">tea</option>
+                    <option value="wheat">wheat</option>
                 </select>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-4">
                 <label for="inputState">Product</label>
-                <select id="inputState2" class="form-control">
+                <select id="inputState2" name="product" class="form-control">
                     <option selected>Choose...</option>
-                    <option value="0">apple</option>
-                    <option value="1">banana</option>
-                    <option value="2">orange</option>
-                    <option value="3">strawberry</option>
+                    <option value="apple">apple</option>
+                    <option value="banana">banana</option>
+                    <option value="orange">orange</option>
+                    <option value="strawberry">strawberry</option>
                 </select>
             </div>
             </div>
             <div class="form-group col-md-3">
-                <label for="inputEmail1">Price Min $</label>
-                <input type="number" class="form-control" id="inputEmail1" placeholder="Price Min">
+                <label for="inputEmail1">Price  $</label>
+                <input type="number" class="form-control" id="price" name="price" placeholder="Price ">
             </div>
             <div class="form-group col-md-3">
-                <label for="inputPassword2">Price Max $</label>
-                <input type="number" class="form-control" id="inputPassword2" placeholder="Price Max">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputEmail3">Menge Min</label>
-                <input type="number" class="form-control" id="inputEmail3" placeholder="Menge Min">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputPassword4">Menge Max</label>
-                <input type="number" class="form-control" id="inputPassword4" placeholder="Menge Max">
+                <label for="inputPassword4">Menge </label>
+                <input type="number" class="form-control" id="menge" name="amount" placeholder="Menge ">
             </div>
         </div>
 
@@ -68,11 +60,11 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="publishDateMin">Publish date minimum</label>
-                <input type="date" class="form-control" id="publishDateMin" value="YYYY-MM-DD">
+                <input type="date" class="form-control" id="publishDateMin" name="date_min" value="YYYY-MM-DD">
             </div>
             <div class="form-group col-md-6">
                 <label for="publishDateMax">Publish date maximum</label>
-                <input type="date" class="form-control" id="publishDateMax" value="YYYY-MM-DD">
+                <input type="date" class="form-control" id="publishDateMax" name="date_max" value="YYYY-MM-DD">
             </div>
         </div>
         <div class="form-group">
@@ -99,16 +91,24 @@
         </div>
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
+    <hr>
     <!-- LISTS ALL FILTERED POSTS -->
     <div>
     {% for posts in queryset %}
       <div class="content-section">
              <div class="media">
-                    <img class="rounded-circle account-img" src="{{ posts.title }}">
+                    <img class="rounded-circle account-img" src="{{ posts.author.profile.image.url }}">
                     <div class="media-body">
-                           <h2 class="account-heading">{{ posts.date_posted }}</h2>
+                        <a class="mr-2" href="#">{{ posts.author }}</a>
+                        <small class="text-muted">{{ posts.date_posted|date:"F d, Y"}}</small>
+                        <h2><a class="article-title" href="{% url 'digitalFarm-detail' posts.id %}">{{ posts.title }}</a></h2>
+                        <div>
+                           <p class="article-content">{{ posts.content }}</p>
                            <p class="text-secondary">{{ posts.author }}</p>
-                           <p class="text-secondary">{{ user.city_choices }}</p>
+                           <p class="text-secondary">{{ posts.date_posted }}</p>
+                           <p class="text-secondary">{{ posts.city }}</p>
+                           <p class="text-secondary">{{ posts.category }}</p>
+                        </div>
                     </div>
              </div>
       </div>
