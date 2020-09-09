@@ -6,22 +6,15 @@
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digitalFarm/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digitalFarm/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/migrations/0002_snippet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/migrations/0003_auto_20200906_1339.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/digitalFarm/migrations/0004_auto_20200906_1843.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/digitalFarm/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/allium.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/wurzelgemuese.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/berries.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/berries.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/fruits.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/fruits.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/grains.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/grains.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/greens.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/greens.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/honey.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/honey.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/legumes.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/legumes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/nuts.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/nuts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/oil.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/oil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/spices.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/spices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/tea.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/category/tea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/filter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/filter_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/filter_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/digitalFarm/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digitalFarm/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +113,9 @@
       <workItem from="1599395257054" duration="13260000" />
       <workItem from="1599463782624" duration="4317000" />
       <workItem from="1599482989392" duration="5550000" />
-      <workItem from="1599544771869" duration="651000" />
+      <workItem from="1599544771869" duration="13256000" />
+      <workItem from="1599634354243" duration="8228000" />
+      <workItem from="1599652374381" duration="9314000" />
     </task>
     <servers />
   </component>

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from django.contrib.auth.models import User
-from .models import Post
+from .models import Post#, #Category,Item
 from .forms import FilterForm
 from .filters import ProductFilter
 
@@ -36,18 +36,27 @@ def is_valid_queryparam(param):
 def filter_list(request):#BootstrapFilterView(request)
     qs = Post.objects.all()
     categories = Post.category
-    products = Post.product
+    #subcategories = Category.objects.filter
+    products = Post.product#.fruit_choices #Post.products
     city = Post.city_choices
     price = Post.price
 
-    print(Post.category)
+    #subcategories = Category.objects.filter(parent_category__id=target_category.id)
+    #print(Post.category)
     #filter = ProductFilter(request.GET, queryset= products)
     title_contains_query = request.GET.get('title_contains')
     categories_query = request.GET.get('category')
+    #subcategories_query = request.GET.get('subcategory')
     product_query = request.GET.get('product')
     city_query = request.GET.get('city')
     price_query = request.GET.get('product')
     amount_query = request.GET.get('amount')
+    #cat = Category.objects.all()
+    #for sub_cat in cat.sub_categories.all():
+
+    #parents = Category.objects.filter(parent=None)
+    #parent = parents[0]  # create some categories before using it
+    #childs = parent.childs.all()
 
     #date_min_query = request.GET.get('date_min')
     #date_max_query = request.GET.get('date_max')
@@ -58,6 +67,9 @@ def filter_list(request):#BootstrapFilterView(request)
     #category
     if is_valid_queryparam(categories_query) and categories_query != 'Choose...':
         qs = qs.filter(category__iexact=categories_query)
+    # subcategory
+    #if is_valid_queryparam(subcategories_query) and subcategories_query != 'Choose...':
+        #qs = qs.filter(subcategory__iexact=subcategories_query) #parent_category__id=target_category.id
     #product
     if is_valid_queryparam(product_query) and product_query != 'Choose...':
         qs = qs.filter(product__iexact=product_query)
@@ -70,6 +82,7 @@ def filter_list(request):#BootstrapFilterView(request)
     #Menge
     if is_valid_queryparam(amount_query) and amount_query != 'Menge':
         qs = qs.filter(amount__iexact=amount_query)
+
     #date_min
     #if is_valid_queryparam(date_min_query):
         #qs = qs.filter(date_posted__gte=date_min_query) #date_posted
@@ -90,9 +103,9 @@ def filter_list(request):#BootstrapFilterView(request)
 
 #def category_list(request, slug):
 #    category = Category.objects.get(slug=slug)
-#    products = ProductFilter(request.GET, queryset=Products.objects.filter(category=category)
+ #   products = ProductFilter(request.GET, queryset=Products.objects.filter(category=category)
 
-#    return render(request, 'products/category_list.html', {"products":products, 'category': category})
+   # return render(request, 'products/category_list.html', {"products":products, 'category': category})
 
 
 def about(request):
@@ -185,16 +198,12 @@ class FilterView(TemplateView):
 
     def filter(self, request): #get request
         form = FilterForm(request.GET)
-        #form = FilterForm()
+        #form = FilterForm() #war vorher hashtag
         form.save()
         posts = Post.objects.all()
-        print(posts)
-        print("inside def filter / Get request")
-
         title_contains = request.GET.get('title_contains')
-        print(title_contains)
 
-        #posts = Post.objects.all()
+
         myFilter = ProductFilter(request.GET, queryset=posts)
         posts = myFilter.qs
         #return render(request, "digitalFarm/filter.html", posts)
@@ -214,7 +223,7 @@ class FilterView(TemplateView):
             post = form.save()
             return redirect('filter:filter')
 
-        args = {'form' : form}
+        args = {'form': form}
         return render(request, self.template_name, args)
 
 from .models import Snippet
