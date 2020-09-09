@@ -59,24 +59,49 @@ class Post(models.Model):
     post = models.CharField(max_length=100, default='SOME STRING')
 
     category_choices = (
-        ('Fruits', 'Veggies'),
-        ('Nuts', 'Honey'),
-        ('Tea', 'Legumes'),
-        ('Oil', 'Wheat'),
-        ('Flowers', 'Mushroom'),
+        (1, 'Fruits'),
+        (2, 'Nuts'),
+        (3, 'Tea'),
+        (4, 'Oil'),
+        (5, 'Flowers'),
+        (6, 'Veggies'),
+        (7, 'Honey'),
+        (8, 'Legumes'),
+        (9, 'Wheat'),
+        (10, 'Mushroom'),
     )
 
     fruit_choices= (
-        ('apple', 'banana'),
-        ('orange', 'peach'),
-        ('strawberry', 'kiwi'),
-        ('coconut', 'avocado'),
-        ('watermelon', 'cherry'),
+        (1, 'apple'),
+        (2, 'orange'),
+        (3, 'strawberry'),
+        (4, 'coconut'),
+        (5, 'watermelon'),
+        (6, 'banana'),
+        (7, 'peach'),
+        (8, 'kiwi'),
+        (9, 'avocado'),
+        (10, 'cherry'),
+    )
+    veggie_choices= (
+        (1, 'Avocado Bean'),
+        (2, 'Broccoli'),
+        (3, 'Carrot'),
+        (4, 'Corn'),
+        (5, 'Potatoe'),
+        (6, 'Fresh Bean'),
+        (7, 'cabbage'),
+        (8, 'Cucumber'),
+        (9, 'Eggplant'),
+        (10, 'Tomatoes'),
     )
     city_choices= (
-        ('Istanbul', 'Izmir'),
-        ('Denizli', 'Antalya'),
-        ('Aydin', 'Rize'),
+        (1, 'Istanbul'),
+        (2, 'Denizli'),
+        (3, 'Aydin'),
+        (4, 'Izmir'),
+        (5, 'Antalya'),
+        (6, 'Rize'),
     )
     #MEDIA_CHOICES = (
     #    ('Fruits', (
@@ -94,14 +119,12 @@ class Post(models.Model):
         ('GMO Free', 'Organic'),
         ('Fairtrade'),
     )
-
+    #subcategory = models.ManyToManyField(Subcategory, blank=True)
     #category = models.ForeignKey(Category, on_delete=models.CASCADE, choices=Category.category_choices)  # parent
     #item = models.ForeignKey(Item, on_delete=models.CASCADE, default=1)  # productitem of category
-    category = models.CharField(max_length=15, choices=category_choices, default=0) #onetomany? one category has multiple products
-    #subcategory = models.ManyToManyField(Subcategory, blank=True)
-
-    city = models.CharField(max_length=15, choices=city_choices, default=0)
-    product = models.CharField(max_length=15, choices=fruit_choices, default=0)
+    category = models.IntegerField(max_length=15, choices=category_choices, default=0) #onetomany? one category has multiple products
+    city = models.IntegerField(max_length=15, choices=city_choices, default=0)
+    product = models.IntegerField(max_length=15, choices=fruit_choices, default=0)
     product_type = models.CharField(max_length=15, blank=True, default='SOME STRING')
     amount = models.CharField(max_length=15, blank=True, default='SOME STRING')
     price = models.CharField(max_length=15, blank=True, default='SOME STRING')
@@ -111,7 +134,7 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('digitalFarm-detail', kwargs={'pk': self.pk})
-    
+
 class Snippet(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()

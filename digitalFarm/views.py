@@ -36,6 +36,10 @@ def is_valid_queryparam(param):
 def filter_list(request):#BootstrapFilterView(request)
     qs = Post.objects.all()
     categories = Post.category
+
+    #fruits = Post.objects.filter(categories='Fruits')
+    #veggies = Post.objects.filter(categories='Veggies')
+
     #subcategories = Category.objects.filter
     products = Post.product#.fruit_choices #Post.products
     city = Post.city_choices
@@ -150,7 +154,10 @@ def spices(request):
 def tea(request):
     return render(request, 'digitalFarm/category/tea.html')
 
-
+#all products- compares the value of the choosen category with the value/name of the post.category
+def items(request):
+    items = Post.objects.get(pk=request.GET.get('value'))#oder .filter()? #get(category.value or inputState.value=pk
+    return render(request, 'filter_list.html', {'item': items})
 
 class PostListView(ListView):
     model = Post
