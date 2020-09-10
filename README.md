@@ -31,7 +31,7 @@ Django-filter
 
 
 #### 1. Register 
-
+##### To register, you need to click on 'register' on the navigationbar and fill out the form and submit.
 <img width="115" alt="Bildschirmfoto 2020-09-10 um 13 43 21" src="https://user-images.githubusercontent.com/44448858/92726967-b5c8a880-f36e-11ea-834c-babd4f88dd41.png">
 
 
@@ -39,31 +39,47 @@ Django-filter
 
 #### 2. Login 
 
+##### Then you have to Login with the previous dates you have put when you registered
 <img width="845" alt="Bildschirmfoto 2020-09-10 um 13 43 57" src="https://user-images.githubusercontent.com/44448858/92727061-d98bee80-f36e-11ea-889b-f1ba66093cb0.png">
 
 
-#### 3. Post a post
+#### 3. Create a post
+
+##### If you want to create a post, click on 'New Post' on the navigationbar and fill out the form, then submit and your post was created! You will be then asked if you want to update or delete it, if you mistakenly created the post (-with wrong data). Go on the homepage to see your post if you like! There you can also see other User's posts that were recently created
 
 <img width="575" alt="Bildschirmfoto 2020-09-10 um 13 41 59" src="https://user-images.githubusercontent.com/44448858/92727762-ec52f300-f36f-11ea-94c3-6ef1c8888ff0.png">
 
 
 #### 4. Search on home or filter for a post
 
+##### If you are a buyer, you might want to filter in all those created posts. 
+
 <img width="892" alt="Bildschirmfoto 2020-09-10 um 14 18 28" src="https://user-images.githubusercontent.com/44448858/92728676-751e5e80-f371-11ea-9425-b53af2badfd0.png">
 
+##### You can filter by 'title'
 
 <img width="880" alt="Bildschirmfoto 2020-09-10 um 14 19 08" src="https://user-images.githubusercontent.com/44448858/92728680-79e31280-f371-11ea-95bd-69d5066b00ab.png">
 
+##### You can filter by 'city'
 
 <img width="896" alt="Bildschirmfoto 2020-09-10 um 14 19 33" src="https://user-images.githubusercontent.com/44448858/92728696-823b4d80-f371-11ea-8d5f-08584b856c81.png">
 
+##### You can filter by 'category'
 
 <img width="859" alt="Bildschirmfoto 2020-09-10 um 14 20 06" src="https://user-images.githubusercontent.com/44448858/92728697-84051100-f371-11ea-8f92-3a2b5f99543a.png">
 
 
 #### 5. Email the author for further more details 
 
+##### Here will be listed all User accounts (yours included), if you want to contact a user, use his emailadress which he has allowed to use for business.
+
 <img width="1268" alt="Bildschirmfoto 2020-09-10 um 13 40 29" src="https://user-images.githubusercontent.com/44448858/92727676-ca597080-f36f-11ea-994c-f66258a28f75.png">
+
+#### 6. Logout
+
+##### If you need to Logout just click on 'logout' in the nav bar and you will be logged out!
+
+<img width="884" alt="Bildschirmfoto 2020-09-10 um 13 43 09" src="https://user-images.githubusercontent.com/44448858/92743082-8753c900-f380-11ea-9c29-0003d301e888.png">
 
 
 ## Orientation
@@ -84,14 +100,16 @@ Django-filter
 
 ### Our categories 
 
+##### Here you can see all categories that can be chosen when creating a post. If you click on one of them (image), then you will be redirect to the products of the chosen category.
 
 <img width="1277" alt="Bildschirmfoto 2020-09-10 um 13 40 47" src="https://user-images.githubusercontent.com/44448858/92727570-9ed68600-f36f-11ea-9950-058e1d6d7096.png">
-
 
 <img width="1275" alt="Bildschirmfoto 2020-09-10 um 13 41 23" src="https://user-images.githubusercontent.com/44448858/92727527-8cf4e300-f36f-11ea-9f4d-f7d4dc92afde.png">
 
 
 ### Your Profile
+
+##### If you like to see or change your profile details, just go on 'Profile'. You can change your name, emailadress and/or picture if you want. You need to save your changes by clicking on the 'save update' button. If you want to delete your profile for good, you need to click on the red button 'delete' below. Don't worry if you press it accidently, you will be then asked if you are sure to delete. If you do, just press 'delete', if it was by accident press 'cancel'.
 
 <img width="1275" alt="Bildschirmfoto 2020-09-10 um 13 40 15" src="https://user-images.githubusercontent.com/44448858/92727741-e4934e80-f36f-11ea-9ecc-4b9a5d51472b.png">
 
