@@ -16,12 +16,6 @@ Clone this repo to your local machine using https://github.com/mx1txm/digitalFar
 #### sqlparse==0.3.1
 
 ## Installation
-Python
-Django
-Django Projekt erstellen
-App erstellen
-Django-crispy form
-Django-filter
 
 <img width="824" alt="Bildschirmfoto 2020-09-10 um 12 56 13" src="https://user-images.githubusercontent.com/44448858/92721614-a9d8e880-f366-11ea-92f9-4ffc9fed3044.png">
 
