@@ -55,6 +55,9 @@ def filter_list(request):#BootstrapFilterView(request)
     city_query = request.GET.get('city')
     price_query = request.GET.get('product')
     amount_query = request.GET.get('amount')
+
+    #selectedCategory = Post.objects.filter(name='category')
+    transactionSubCategory = Post.objects.filter(category=categories_query)
     #cat = Category.objects.all()
     #for sub_cat in cat.sub_categories.all():
 
@@ -78,7 +81,7 @@ def filter_list(request):#BootstrapFilterView(request)
     if is_valid_queryparam(product_query) and product_query != 'Choose...':
         qs = qs.filter(product__iexact=product_query)
     #city
-    if is_valid_queryparam(city_query):
+    if is_valid_queryparam(city_query) and city_query != 'Choose...':
         qs = qs.filter(city__iexact=city_query)
     #price
     if is_valid_queryparam(price_query) and price_query != 'Price':
@@ -100,6 +103,7 @@ def filter_list(request):#BootstrapFilterView(request)
         'product' : products,
         'city' : city,
         'price' : price,
+        'transactionSubCategory': transactionSubCategory,
     }
 
     #return render(request, 'digitalFarm/filter_list.html', {'filter': filter})

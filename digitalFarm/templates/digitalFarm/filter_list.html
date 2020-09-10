@@ -18,8 +18,16 @@
             </div>
             <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity" name="city">
+                <label for="inputState">City</label>
+                <select id="inputState0" name='city' class="form-control">
+                    <option selected>Choose...</option>
+                    <option value="Istanbul">Istanbul</option>
+                    <option value="Rize">Rize</option>
+                    <option value="Denizli">Denizli</option>
+                    <option value="Aydin">Aydin</option>
+                    <option value="Izmir">Izmir</option>
+                    <option value="Antalya">Antalya</option>
+                </select>
             </div>
             <div class="form-group col-md-4">
                 <label for="inputState">Category</label>
@@ -38,15 +46,13 @@
             <div class="form-group col-md-4">
                 <label for="inputState">Product</label>
                 <select id="inputState2" name="item" class="form-control">
-                    {% if inputState.isSelected %}
                     <option selected>Choose...</option>
-                    {% for item in items %}
-                    <option value="{{item.id}}">{{item.title}}</option>
+                    {% for item in transactionSubCategory %}
+                    <option value="{{item.value}}">{{item.title}}</option>
                     {% endfor %}
                     <option value="banana">banana</option>
                     <option value="orange">orange</option>
                     <option value="strawberry">strawberry</option>
-                    {% endif %}
                 </select>
             </div>
             </div>
@@ -59,8 +65,6 @@
                 <input type="number" class="form-control" id="menge" name="amount" placeholder="Menge ">
             </div>
         </div>
-
-
         <!-- <div class="form-group" style="display: inline"> -->
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -111,8 +115,6 @@
                            <p class="article-content">{{ posts.content }}</p>
                            <p class="text-secondary">{{ posts.author }}</p>
                            <p class="text-secondary">{{ posts.date_posted }}</p>
-                           <p class="text-secondary">{{ posts.city }}</p>
-                           <p class="text-secondary">{{ posts.category }}</p>
                         </div>
                     </div>
              </div>

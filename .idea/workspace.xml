@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="74ebc7b0-23dd-404a-be97-c431c6cb791d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digitalFarm/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/filter_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/templates/digitalFarm/filter_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digitalFarm/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/digitalFarm/views.py" afterDir="false" />
@@ -106,7 +107,8 @@
       <workItem from="1599482989392" duration="5550000" />
       <workItem from="1599544771869" duration="13256000" />
       <workItem from="1599634354243" duration="8228000" />
-      <workItem from="1599652374381" duration="14674000" />
+      <workItem from="1599652374381" duration="18818000" />
+      <workItem from="1599718474512" duration="1349000" />
     </task>
     <servers />
   </component>

@@ -6,50 +6,6 @@ from django import forms
 from crispy_forms.bootstrap import InlineCheckboxes
 from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit
 
-#Category
-#from django.utils.text import slugify
-
-
-#class Category(models.Model):
-    #name= models.CharField(max_length=20)
-    #category = models.Choices(category_choices)
-    #slug = models.SlugField(verbose_name='Slug')
-    #category = models.ForeignKey( #parent
-        #"self",
-        #on_delete=models.CASCADE,
-        #null=True,
-        #blank=True,
-        #related_name="Item",
-    #)
-    #class Meta:
-    #    ordering = ('name',)
-    #    verbose_name = 'category'
-     #   verbose_name_plural = 'categories'
-
-    #def __str__(self):
-     #   return self.name
-
-    #def save(self, *args, **kwargs):
-    #    self.slug = slugify(self.name)
-    #    super(Category, self).save(*args, **kwargs)
-
-    #def get_absolute_url(self):
-    #    return reverse('shop:product_list_by_category',
-    #                   args=[self.slug])
-
-#DEFAULT_CAT_ID = 1
-#Subcategory
-#class Item(models.Model):
-    #name = models.CharField(max_length=20)
-    #category = models.ForeignKey(Category, related_name='item', on_delete=models.CASCADE, blank=True,
-                             #null=True, verbose_name='Select category', default=None)
-    #slug = models.SlugField(unique=True, null=True)
-
-    #class Meta:
-        #verbose_name_plural = 'subcategory'
-
-    #def __str__(self):
-        #return self.name
 #Post
 class Post(models.Model):
     title = models.CharField(max_length=100)
@@ -59,29 +15,29 @@ class Post(models.Model):
     post = models.CharField(max_length=100, default='SOME STRING')
 
     category_choices = (
-        (1, 'Fruits'),
-        (2, 'Nuts'),
-        (3, 'Tea'),
-        (4, 'Oil'),
-        (5, 'Flowers'),
-        (6, 'Veggies'),
-        (7, 'Honey'),
-        (8, 'Legumes'),
-        (9, 'Wheat'),
-        (10, 'Mushroom'),
+        ('fruits', 'Fruits'),
+        ('nuts', 'Nuts'),
+        ('tea', 'Tea'),
+        ('oil', 'Oil'),
+        ('flowers', 'Flowers'),
+        ('veggies', 'Veggies'),
+        ('honey', 'Honey'),
+        ('legumes', 'Legumes'),
+        ('wheat', 'Wheat'),
+        ('mushroom', 'Mushroom'),
     )
 
     fruit_choices= (
-        (1, 'apple'),
-        (2, 'orange'),
-        (3, 'strawberry'),
-        (4, 'coconut'),
-        (5, 'watermelon'),
-        (6, 'banana'),
-        (7, 'peach'),
-        (8, 'kiwi'),
-        (9, 'avocado'),
-        (10, 'cherry'),
+        ('apple', 'apple'),
+        ('orange', 'orange'),
+        ('strawberry', 'strawberry'),
+        ('coconut', 'coconut'),
+        ('watermelon', 'watermelon'),
+        ('banana', 'banana'),
+        ('peach', 'peach'),
+        ('kiwi', 'kiwi'),
+        ('avocado', 'avocado'),
+        ('cherry', 'cherry'),
     )
     veggie_choices= (
         (1, 'Avocado Bean'),
@@ -96,25 +52,13 @@ class Post(models.Model):
         (10, 'Tomatoes'),
     )
     city_choices= (
-        (1, 'Istanbul'),
-        (2, 'Denizli'),
-        (3, 'Aydin'),
-        (4, 'Izmir'),
-        (5, 'Antalya'),
-        (6, 'Rize'),
+        ('Istanbul', 'Istanbul'),
+        ('Denizli', 'Denizli'),
+        ('Aydin', 'Aydin'),
+        ('Izmir', 'Izmir'),
+        ('Antalya', 'Antalya'),
+        ('Rize', 'Rize'),
     )
-    #MEDIA_CHOICES = (
-    #    ('Fruits', (
-    #        ('apple', 'Apple'),
-    #        ('banana', 'Banana'),
-    #    )
-     #    ),
-    #    ('Veggies', (
-    #        ('cucumber', 'Cucumber'),
-    #        ('eggplant', 'Eggplant'),
-    #    )
-    #     ),
-    #)
     field_name = (
         ('GMO Free', 'Organic'),
         ('Fairtrade'),
@@ -122,12 +66,12 @@ class Post(models.Model):
     #subcategory = models.ManyToManyField(Subcategory, blank=True)
     #category = models.ForeignKey(Category, on_delete=models.CASCADE, choices=Category.category_choices)  # parent
     #item = models.ForeignKey(Item, on_delete=models.CASCADE, default=1)  # productitem of category
-    category = models.IntegerField(max_length=15, choices=category_choices, default=0) #onetomany? one category has multiple products
-    city = models.IntegerField(max_length=15, choices=city_choices, default=0)
-    product = models.IntegerField(max_length=15, choices=fruit_choices, default=0)
+    category = models.CharField(max_length=15, choices=category_choices, default=0) #onetomany? one category has multiple products
+    city = models.CharField(max_length=15, choices=city_choices, default=0)
+    product = models.CharField(max_length=15, choices=fruit_choices, default=0)
     product_type = models.CharField(max_length=15, blank=True, default='SOME STRING')
-    amount = models.CharField(max_length=15, blank=True, default='SOME STRING')
-    price = models.CharField(max_length=15, blank=True, default='SOME STRING')
+    amount = models.IntegerField(blank=True, default='SOME STRING')
+    price = models.IntegerField(blank=True, default='SOME STRING')
 
     def __str__(self):
         return self.title
