@@ -25,12 +25,6 @@ Django-filter
 
 <img width="824" alt="Bildschirmfoto 2020-09-10 um 12 56 13" src="https://user-images.githubusercontent.com/44448858/92721614-a9d8e880-f366-11ea-92f9-4ffc9fed3044.png">
 
-<img width="115" alt="Bildschirmfoto 2020-09-10 um 13 43 21" src="https://user-images.githubusercontent.com/44448858/92726967-b5c8a880-f36e-11ea-834c-babd4f88dd41.png">
-
-<img width="887" alt="Bildschirmfoto 2020-09-10 um 13 43 37" src="https://user-images.githubusercontent.com/44448858/92727251-1952d600-f36f-11ea-8cbc-3c128b4bf140.png">
-
-<img width="845" alt="Bildschirmfoto 2020-09-10 um 13 43 57" src="https://user-images.githubusercontent.com/44448858/92727061-d98bee80-f36e-11ea-889b-f1ba66093cb0.png">
-
 <img width="1277" alt="Bildschirmfoto 2020-09-10 um 13 38 36" src="https://user-images.githubusercontent.com/44448858/92727092-e872a100-f36e-11ea-87fc-1f716a3a794d.png">
 
 <img width="1279" alt="Bildschirmfoto 2020-09-10 um 13 39 39" src="https://user-images.githubusercontent.com/44448858/92727124-f1fc0900-f36e-11ea-8da3-ed8396a1fd70.png">
@@ -59,8 +53,16 @@ Django-filter
 
 <img width="1254" alt="Bildschirmfoto 2020-09-10 um 14 01 17" src="https://user-images.githubusercontent.com/44448858/92726874-9893da00-f36e-11ea-8e21-be03b163fe6f.png">
 
-### 1. Register 
-2. Login 
+#### 1. Register 
+
+<img width="115" alt="Bildschirmfoto 2020-09-10 um 13 43 21" src="https://user-images.githubusercontent.com/44448858/92726967-b5c8a880-f36e-11ea-834c-babd4f88dd41.png">
+
+<img width="887" alt="Bildschirmfoto 2020-09-10 um 13 43 37" src="https://user-images.githubusercontent.com/44448858/92727251-1952d600-f36f-11ea-8cbc-3c128b4bf140.png">
+
+#### 2. Login 
+
+<img width="845" alt="Bildschirmfoto 2020-09-10 um 13 43 57" src="https://user-images.githubusercontent.com/44448858/92727061-d98bee80-f36e-11ea-889b-f1ba66093cb0.png">
+
 3. Post a post
 4. Search on home or filter for a post
 5. Email the author for further more details 
