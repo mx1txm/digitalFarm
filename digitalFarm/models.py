@@ -69,7 +69,7 @@ class Post(models.Model):
     category = models.CharField(max_length=15, choices=category_choices, default=0) #onetomany? one category has multiple products
     city = models.CharField(max_length=15, choices=city_choices, default=0)
     product = models.CharField(max_length=15, choices=fruit_choices, default=0)
-    product_type = models.CharField(max_length=15, blank=True, default='SOME STRING')
+    #product_type = models.CharField(max_length=15, blank=True, default='SOME STRING')
     amount = models.IntegerField(blank=True, default='SOME STRING')
     price = models.IntegerField(blank=True, default='SOME STRING')
 

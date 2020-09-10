@@ -36,7 +36,8 @@ def is_valid_queryparam(param):
 def filter_list(request):#BootstrapFilterView(request)
     qs = Post.objects.all()
     categories = Post.category
-
+    fruits_list = Post.fruit_choices
+    print(fruits_list)
     #fruits = Post.objects.filter(categories='Fruits')
     #veggies = Post.objects.filter(categories='Veggies')
 
@@ -104,6 +105,7 @@ def filter_list(request):#BootstrapFilterView(request)
         'city' : city,
         'price' : price,
         'transactionSubCategory': transactionSubCategory,
+        'fruits_list': fruits_list,
     }
 
     #return render(request, 'digitalFarm/filter_list.html', {'filter': filter})
@@ -174,7 +176,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'content', 'city', 'category', 'product', 'product_type', 'amount', 'price']
+    fields = ['title', 'content', 'city', 'category', 'product', 'amount', 'price']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -182,7 +184,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['title', 'content', 'city', 'category','product', 'product_type', 'amount', 'price']
+    fields = ['title', 'content', 'city', 'category','product', 'amount', 'price']
 
     def form_valid(self, form):
         form.instance.author = self.request.user

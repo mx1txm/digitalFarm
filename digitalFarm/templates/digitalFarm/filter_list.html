@@ -48,7 +48,9 @@
                 <select id="inputState2" name="item" class="form-control">
                     <option selected>Choose...</option>
                     {% for item in transactionSubCategory %}
-                    <option value="{{item.value}}">{{item.title}}</option>
+                        {% if item.category == 'fruits' %} <!-- bis hierhin klappts -->
+                            <option value="{{item.value}}">{{ fruits_list }}</option>  <!-- fruits_list gibt die ganze liste aus -->
+                        {% endif %}
                     {% endfor %}
                     <option value="banana">banana</option>
                     <option value="orange">orange</option>
@@ -115,6 +117,8 @@
                            <p class="article-content">{{ posts.content }}</p>
                            <p class="text-secondary">{{ posts.author }}</p>
                            <p class="text-secondary">{{ posts.date_posted }}</p>
+                           <p class="text-secondary">{{ post.city}}</p>
+                           <p class="text-secondary">{{ post.category}}</p>
                         </div>
                     </div>
              </div>
